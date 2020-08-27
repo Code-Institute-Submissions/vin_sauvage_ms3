@@ -1,60 +1,38 @@
 {% extends 'base.html' %} {% block content %}
 
-<div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-        <div class="post-preview">
-            <a href="post.html">
-                <h2 class="post-title">
-                    Man must explore, and this is exploration at its greatest
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="static/img/intro.jpg" alt="">
+            <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+                <h2 class="section-heading mb-4">
+                    <span class="section-heading-upper">Fresh Coffee</span>
+                    <span class="section-heading-lower">Worth Drinking</span>
                 </h2>
-                <h3 class="post-subtitle">
-                    Problems look mighty small from 150 miles up
-                </h3>
-            </a>
-            <p class="post-meta">Posted by
-                <a href="#">Start Bootstrap</a> on September 24, 2017</p>
-        </div>
-        <hr>
-        <div class="post-preview">
-            <a href="post.html">
-                <h2 class="post-title">
-                    I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                </h2>
-            </a>
-            <p class="post-meta">Posted by
-                <a href="#">Start Bootstrap</a> on September 18, 2017</p>
-        </div>
-        <hr>
-        <div class="post-preview">
-            <a href="post.html">
-                <h2 class="post-title">
-                    Science has not yet mastered prophecy
-                </h2>
-                <h3 class="post-subtitle">
-                    We predict too much for the next year and yet far too little for the next ten.
-                </h3>
-            </a>
-            <p class="post-meta">Posted by
-                <a href="#">Start Bootstrap</a> on August 24, 2017</p>
-        </div>
-        <hr>
-        <div class="post-preview">
-            <a href="post.html">
-                <h2 class="post-title">
-                    Failure is not an option
-                </h2>
-                <h3 class="post-subtitle">
-                    Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                </h3>
-            </a>
-            <p class="post-meta">Posted by
-                <a href="#">Start Bootstrap</a> on July 8, 2017</p>
-        </div>
-        <hr>
-        <!-- Pager -->
-        <div class="clearfix">
-            <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+                <p class="mb-3">Every cup of our quality artisan coffee starts with locally sourced, hand picked ingredients. Once you try it, our coffee will be a blissful addition to your everyday morning routine - we guarantee it!
+                </p>
+                <div class="intro-button mx-auto">
+                    <a class="btn btn-primary btn-xl" href="#">Visit Us Today!</a>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 mx-auto">
+                <div class="cta-inner text-center rounded">
+                    <h2 class="section-heading mb-4">
+                        <span class="section-heading-upper">Our Promise</span>
+                        <span class="section-heading-lower">To You</span>
+                    </h2>
+                    <p class="mb-0">When you walk into our shop to start your day, we are dedicated to providing you with friendly service, a welcoming atmosphere, and above all else, excellent products made with the highest quality ingredients. If you are not satisfied, please let us know and we will do whatever we can to make things right!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 {% endblock %}
