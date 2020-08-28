@@ -8009,7 +8009,7 @@ button.bg-dark:focus {
 }
 
 .position-fixed {
-  position: fixed !important;
+  position: fixed /*!important*/;
 }
 
 .position-sticky {

@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Lora';
-  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg.jpg");
+  background-image: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/karina-peters-C-Zr2iuQFys-unsplash.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -32,7 +32,6 @@ p {
 .site-heading {
   margin-top: 5rem;
   margin-bottom: 5rem;
-  text-transform: uppercase;
   line-height: 1;
   font-family: 'Raleway';
 }
@@ -41,12 +40,15 @@ p {
   display: block;
   font-size: 2rem;
   font-weight: 800;
+  padding-top: 1rem;
+  text-transform: none;
 }
 
 .site-heading .site-heading-lower {
   font-size: 5rem;
   font-weight: 100;
   line-height: 4rem;
+  text-transform: none;
 }
 
 .page-section {
@@ -55,39 +57,48 @@ p {
 }
 
 .section-heading {
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .section-heading .section-heading-upper {
   display: block;
   font-size: 1rem;
   font-weight: 800;
+  padding-top: 1REM;
 }
 
 .section-heading .section-heading-lower {
   display: block;
   font-size: 3rem;
   font-weight: 100;
+  text-transform: none;
 }
 
 .bg-faded {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
+
 #mainNav {
-  background-color: rgba(47, 23, 15, 0.9);
+  background-color: rgba(219, 230, 248, 0.3) !important;
   font-family: 'Raleway';
+  /* fixes navbar position to left*/
+  position: fixed;
+  top: 0;
+  right; unset !important;
+  left: 0;
+  z-index: 1030;
 }
 
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: rgba(234, 185, 0, 1);
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
 }
-
+#e6a756
 #mainNav .navbar-nav .nav-item.active .nav-link {
   color: #e6a756;
 }
@@ -104,6 +115,10 @@ p {
   }
 }
 
+.fa, fas {
+    colour:rgba(234, 185, 0, 1);
+}
+
 .btn-xl {
   font-weight: 700;
   font-size: 0.8rem;
@@ -111,10 +126,19 @@ p {
   padding-bottom: 1.5rem;
   padding-left: 2rem;
   padding-right: 2rem;
+
 }
 
 .intro {
   position: relative;
+}
+
+.sign-up {
+  color:rgba(234, 185, 0, 1);
+}
+
+.social-icons {
+  color:rgba(234, 185, 0, 1);
 }
 
 @media (min-width: 992px) {

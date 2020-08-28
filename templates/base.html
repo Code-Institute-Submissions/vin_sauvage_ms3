@@ -8,34 +8,36 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Business Casual - Start Bootstrap Theme</title>
+    <title>VinSauvage</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.css') }}" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <!-- Fontawesome link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom styles for this template -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/business-casual.min.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/business-casual.css') }}" type="text/css" />
 
 </head>
 
 <body>
 
 <h1 class="site-heading text-center text-white d-none d-lg-block">
-    <span class="site-heading-upper text-primary mb-3">A Free Bootstrap 4 Business Theme</span>
-    <span class="site-heading-lower">Wine</span>
+    <span class="site-heading-upper text-primary mb-3">Drink in the Wild Flavours of Savoie</span>
+    <span class="site-heading-lower">VinSauvage</span>
 </h1>
 
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand" href="{{ url_for('index') }}">Wine</a>
+        <a class="navbar-brand" href="{{ url_for('index') }}">VinSauvage</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
-            <i class="fa fa-bars"></i>
+            <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
@@ -55,7 +57,7 @@
                     <a class="nav-link" href="{{ url_for('login') }}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-primary btn-xl" href="{{ url_for('register') }}">Register</a>
+                    <a class="nav-link sign-up" href="{{ url_for('register') }}">Sign up</a>
                 </li>
             </ul>
         </div>
@@ -73,7 +75,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <ul class="list-inline text-center">
+                <ul class="list-inline social-icons text-center">
                     <li class="list-inline-item">
                         <a href="#">
                                 <span class="fa-stack fa-lg">
@@ -99,7 +101,7 @@
                         </a>
                     </li>
                 </ul>
-                <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
+                <p class="copyright text-muted">Copyright &copy; VinSauvage 2020</p>
             </div>
         </div>
     </div>
