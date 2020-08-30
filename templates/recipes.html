@@ -1,16 +1,15 @@
 {% extends 'base.html' %} {% block content %}
 
 <head>
-    <!--<link rel="stylesheet" href="{{ url_for('static', filename='css/recipes.css') }}" type="text/css" />-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recipes.css') }}" type="text/css" />
 </head>
 
 <div class="container">
 
     <!-- Page Heading -->
-    <h1 class="my-4">Page Heading
-        <small >Want to add some recipes? Just join us!</small>
-        <a class="btn btn-primary btn-xl" href="{{ url_for('register') }}">Join Us Today!</a>
-    </h1>
+    <div class="recipes-heading">
+        <div><h2><a>Want to add your recipes? <a class="recipe-sign-up" href="{{ url_for('register') }}">Sign up!</a></h2></div>
+    </div>
 
     <div class="row">
         <div class="col-lg-4 col-sm-6 mb-4">

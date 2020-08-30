@@ -5,13 +5,17 @@
 
 body {
     background: #007bff;
-    background: linear-gradient(to right, #0062E6, #33AEFF);
+/*    background: linear-gradient(to right, #0062E6, #33AEFF);*/
+}
+.recipes-heading {
+    color:aliceblue;
 }
 
 .card-signin {
     border: 0;
     border-radius: 1rem;
     box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    background-color: rgba(219, 230, 248, 1);
     overflow: hidden;
 }
 
@@ -24,12 +28,13 @@ body {
 .card-signin .card-img-left {
     width: 45%;
     /* Link to your background image using in the property below! */
-    background: scroll center url('https://source.unsplash.com/WEQbe2jBg40/414x512');
+    background: scroll center url("../img/karina-peters-C-Zr2iuQFys-unsplash.jpg");
     background-size: cover;
 }
 
 .card-signin .card-body {
     padding: 2rem;
+    background-color: rgba(219, 230, 248, 1);
 }
 
 .form-signin {
@@ -112,7 +117,7 @@ body {
     background-color: #ea4335;
 }
 
-.btn-facebook {
+.btn-secondary {
     color: white;
     background-color: #3b5998;
 }

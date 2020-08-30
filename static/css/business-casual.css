@@ -97,10 +97,17 @@ p {
 #mainNav .navbar-nav .nav-item .nav-link {
   color: rgba(255, 255, 255, 0.7);
   font-weight: 800;
+
 }
-#e6a756
+
 #mainNav .navbar-nav .nav-item.active .nav-link {
   color: #e6a756;
+}
+
+/* styles navbar menu button for smaller displays*/
+.navbar-light .navbar-toggler {
+    border-color: rgba(234, 185, 0, 0.5);
+    color: rgb(234, 185, 0);
 }
 
 @media (min-width: 992px) {
