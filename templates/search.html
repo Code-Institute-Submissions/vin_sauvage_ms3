@@ -1,0 +1,20 @@
+{% extends 'showrecipe.html' %} {% block content_small %}
+
+<div class="row">
+    {% for recipe in recipes %}
+    <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+            <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="{{ url_for('display_one', recipe_id=recipe._id) }}">{{recipe.recipe_name}}</a>
+                </h4>
+                <p class="card-text">{{recipe.description}}</p>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

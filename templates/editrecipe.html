@@ -1,0 +1,92 @@
+{% extends 'base.html'%} {% block content %}
+
+<h3>Edit Recipe</h3>
+
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <p>Want to improve your recipe? Just do it!</p>
+                <div>
+                    <p>There is a problem with your categories? You can modifiy them here</p>
+                    <a class="btn btn-primary btn-xl" href="{{ url_for('manage_category') }}">Manage your categories</a>
+                </div>
+                <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+                <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+                <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+                <form id="contactForm" action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Recipe Name</label>
+                            <input class="form-control" id="recipe_name" name="recipe_name" type="text" value="{{recipe.recipe_name}}">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Author</label>
+                            <input class="form-control" id="author" name="author" type="text" value="{{recipe.author}}">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Description</label>
+                            <input class="form-control" id="description" name="description" type="text" value="{{recipe.description}}">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Category</label>
+                            <select class="form-control" id="category" name="category">
+                                {% for category in categories %}
+                                    {% if recipe.category != category.category_name %}
+                                        <option value="{{category.category_name}}" >{{category.category_name}}</option>
+                                    {% else %}
+                                        <option value="{{category.category_name}}" selected>{{category.category_name}}</option>
+                                    {% endif %}
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Prep Time</label>
+                            <input class="form-control" id="prep_name" name="prep_time" type="text" value="{{recipe.prep_time}}">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Ingredients</label>
+                            <textarea rows="5" class="form-control" id="ingredients" name="ingredients">{{recipe.ingredients}}</textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Method</label>
+                            <textarea rows="5" class="form-control" id="method" name="method">{{recipe.method}}</textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Change its picture!</label>
+                            <input type="text" class="form-control-file" id="img" name="img" value="{{recipe.img}}">
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <a href="{{ url_for('show_recipe') }}"> Cancel </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+{% endblock %}

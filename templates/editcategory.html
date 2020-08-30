@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="center">Manage Categories</h1>
+<div class="container">
+    <div class="row">
+
+        <div id="categories" class="col s12 m3">
+            <div class="card center-align">
+                <form id="contactForm" action="{{ url_for('update_category', category_id=category._id) }}"  method="POST" class="col s12">
+                    <div class="card-content black-text">
+                        <input class="form-control" id="category_name" name="category_name" type="text" value="{{category.category_name}}">
+                        <!--- <span class="card-title">{{ category.category_name }}</span>-->
+                    </div>
+                    <!-- buttons -->
+                        <button class="btn btn-outline-secondary" type="submit">Update</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,105 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<h3>Add Recipe</h3>
+<section class="page-section cta">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <p>Discovered a nice recipe? Add it here!</p>
+                <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
+                <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
+                <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+                <form id="contactForm" action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Recipe Name</label>
+                            <input type="text" class="form-control" placeholder="Recipe Name" id="recipe_name" name="recipe_name">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Author</label>
+                            <input type="text" class="form-control" placeholder="Author" id="author" name="author">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Description</label>
+                            <input type="text" class="form-control" placeholder="Description" id="description" name="description">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Category</label>
+                            <select class="form-control" id="category" name="category">
+                                {% for category in categories %}
+                                    <option value="{{category.category_name}}">{{category.category_name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Prep Time</label>
+                            <input type="text" class="form-control" placeholder="Prep Time" id="prep_time" name="prep_time">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Ingredients</label>
+                            <textarea rows="5" class="form-control" placeholder="Ingredients" id="Ingredients" name="Ingredients"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label>Method</label>
+                            <textarea rows="5" class="form-control" placeholder="Method" id="method" name="method"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group">
+                            <label>Put the link of your recipe's picture here!</label>
+                            <input type="text" class="form-control" placeholder="img" id="img" name="img">
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+                    <button type="submit" class="btn btn-primary" >Add</button>
+                    <a href="{{ url_for('show_recipe') }}"> Cancel </a>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="page-section about-heading">
+    <div class="container">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+        <div class="about-heading-content">
+            <div class="row">
+                <div class="col-xl-9 col-lg-10 mx-auto">
+                    <div class="bg-faded rounded p-5">
+                        <h2 class="section-heading mb-4">
+                            <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
+                            <span class="section-heading-lower">About Our Cafe</span>
+                        </h2>
+                        <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
+                        <p class="mb-0">We guarantee that you will fall in
+                            <em>lust</em>
+                            with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

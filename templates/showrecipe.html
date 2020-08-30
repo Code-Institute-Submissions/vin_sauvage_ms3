@@ -1,0 +1,51 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="container">
+    <div>
+
+    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+        <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Search by author
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="{{ url_for('show_recipe') }}">all</a>
+                {% for author in authors %}
+                <a class="dropdown-item" href="{{ url_for('search', item_name=author.author_name) }}">{{author.author_name}}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="btn-group" role="group">
+            <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Search by category
+            </button>
+            <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                <a class="dropdown-item" href="{{ url_for('show_recipe') }}">all</a>
+                {% for category in categories %}
+                <a class="dropdown-item" href="{{ url_for('search', item_name=category.category_name) }}">{{category.category_name}}</a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <a class="btn btn-primary btn-xl" href="{{ url_for('add_recipe') }}">Add Recipe</a>
+    </div>
+
+<div class="row">
+    {% for recipe in recipes %}
+    <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="card h-100">
+            <a href="{{ url_for('display_one', recipe_id=recipe._id) }}"><img class="card-img-top" src="{{recipe.img}}" alt=""></a>
+            <div class="card-body">
+                <h4 class="card-title">
+                    <a href="{{ url_for('display_one', recipe_id=recipe._id) }}">{{recipe.recipe_name}}</a>
+                </h4>
+                <p class="card-text">{{recipe.description}}</p>
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}
