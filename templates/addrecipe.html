@@ -1,15 +1,14 @@
 {% extends 'base.html' %} {% block content %}
 
 
-<h3>Add Recipe</h3>
+
 <section class="page-section cta">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <p>Discovered a nice recipe? Add it here!</p>
-                <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
-                <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
-                <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+                <h3 class="recipe-heading">Add Recipe</h3>
+                <p>Discovered a wild recipe? Add it here!</p>
+                 <!-- Add a recipe using this form -->
                 <form id="contactForm" action="{{ url_for('insert_recipe') }}" method="POST" class="col s12">
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">
@@ -65,14 +64,14 @@
                     </div>
                     <div class="control-group">
                         <div class="form-group">
-                            <label>Put the link of your recipe's picture here!</label>
+                            <label>Put the link to your recipe's picture here!</label>
                             <input type="text" class="form-control" placeholder="img" id="img" name="img">
                         </div>
                     </div>
                     <br>
                     <div id="success"></div>
                     <button type="submit" class="btn btn-primary" >Add</button>
-                    <a href="{{ url_for('show_recipe') }}"> Cancel </a>
+                    <a class="btn btn-primary btn" href="{{ url_for('show_recipe') }}"> Cancel </a>
                 </form>
             </div>
         </div>
@@ -87,13 +86,10 @@
                 <div class="col-xl-9 col-lg-10 mx-auto">
                     <div class="bg-faded rounded p-5">
                         <h2 class="section-heading mb-4">
-                            <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-                            <span class="section-heading-lower">About Our Cafe</span>
+                            <span class="section-heading-upper">Our Promise</span>
+                            <span class="section-heading-lower">To Share the Wild</span>
                         </h2>
-                        <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-                        <p class="mb-0">We guarantee that you will fall in
-                            <em>lust</em>
-                            with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
+                        <p class="mb-0">Whether you want to make a beer, wine, cidre, liqueur or try your hand in the still room you will find a recipe to suit your taste. Join us to share your own recipe and photo from your quest for VinSauvage. You will be sure to find appreciative friends here. </p>
                     </div>
                 </div>
             </div>

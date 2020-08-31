@@ -1,5 +1,5 @@
 /*!
- * Start Bootstrap - Business Casual v5.0.10 (https://startbootstrap.com/themes/business-casual)
+ * Adapted from Start Bootstrap - Business Casual v5.0.10 (https://startbootstrap.com/themes/business-casual)
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
  */
@@ -104,11 +104,38 @@ p {
   color: #e6a756;
 }
 
-/* styles navbar menu button for smaller displays*/
+/* styles navbar menu button for smaller displays */
 .navbar-light .navbar-toggler {
-    border-color: rgba(234, 185, 0, 0.5);
-    color: rgb(234, 185, 0);
+   color: rgb(234, 185, 0);
+   border: 0;
 }
+
+/* styles addrecipe page */
+.recipes-heading {
+    padding-top: 3rem;
+}
+/*adds margin to left of recipe image and text ***removed** */
+.display_one_img {
+    margin-left: 0px;
+}
+
+.display_one_ingredients {
+    margin-left: 10px;
+}
+
+/* sets recipe display */
+.cta {
+   width: 101%;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
+   background-color: rgba(219, 230, 248, 0.9);
+   padding-left: .4rem;
+}
+/* sets padding on show recipe button container */
+.search-recipe-panel {
+   margin-top: 4rem !important;
+}
+
 
 @media (min-width: 992px) {
   #mainNav .navbar-nav .nav-item .nav-link {
@@ -167,16 +194,23 @@ p {
   }
 }
 
+/* styles addrecipe page heading */
+.recipes-heading {
+    padding-top: 0rem;
+}
+
 @media (min-width: 1200px) {
   .intro .intro-text {
     width: 45%;
   }
 }
-
+/* sets position of recipe display */
 .cta {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+   width: 101%;
+   padding-top: 5rem;
+   padding-bottom: 5rem;
+   background-color: rgba(219, 230, 248, 0.9);
+   padding-left: .4rem;
 }
 
 .cta .cta-inner {
@@ -196,6 +230,11 @@ p {
   right: -0.5rem;
   border: 0.25rem solid rgba(255, 255, 255, 0.85);
   z-index: -1;
+}
+
+/* styles addrecipe page heading */
+.recipes-heading {
+    padding-top: 0rem;
 }
 
 @media (min-width: 992px) {

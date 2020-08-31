@@ -1,19 +1,18 @@
 {% extends 'base.html'%} {% block content %}
 
-<h3>Edit Recipe</h3>
+
 
 <section class="page-section cta">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <p>Want to improve your recipe? Just do it!</p>
+                <h3 class="recipr-edit-title">Edit Recipe</h3>
+                <p>Want to make your recipe wilder? Just do it!</p>
                 <div>
-                    <p>There is a problem with your categories? You can modifiy them here</p>
+                    <p>Got a problem with your categories? You can modifiy them here</p>
                     <a class="btn btn-primary btn-xl" href="{{ url_for('manage_category') }}">Manage your categories</a>
                 </div>
-                <!-- Contact Form - Enter your email address on line 19 of the mail/contact_me.php file to make this form work. -->
-                <!-- WARNING: Some web hosts do not allow emails to be sent through forms to common mail hosts like Gmail or Yahoo. It's recommended that you use a private domain email address! -->
-                <!-- To use the contact form, your site must be on a live web host with PHP! The form will not work locally! -->
+                <!-- this form allows you to edit the recipes -->
                 <form id="contactForm" action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">
@@ -80,7 +79,7 @@
                     <br>
                     <div id="success"></div>
                     <button type="submit" class="btn btn-primary">Update</button>
-                    <a href="{{ url_for('show_recipe') }}"> Cancel </a>
+                    <a class="btn btn-primary" href="{{ url_for('show_recipe') }}"> Cancel </a>
                 </form>
             </div>
         </div>

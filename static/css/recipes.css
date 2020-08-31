@@ -1,10 +1,11 @@
-/*restyles heading*/
+/* restyles heading */
 .recipes-heading {
     display: flex;
     flex-direction: column !important;
     justify-content: center;
     align-items: center;
     color: aliceblue;
+    padding-top: 3rem;
 }
 
 /*adds sign up link*/
