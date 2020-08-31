@@ -288,8 +288,8 @@ This code draws heavily on that in the Code Institute Datacentric development mo
 -   [Heroku deployment was modified from that of AJGreaves](https://github.com/AJGreaves/familyhub/blob/master/README.md#heroku-deployment)
 
 **Acknowledgements**
- Thanks to my mentor Ignatius Ukwuoma who thoughtime did not allow him to review this project was greatly responsible for inspiring me to try to tackle it in such a short time.
-
+Thanks to my mentor Ignatius Ukwuoma who thoughtime did not allow him to review this project was greatly responsible for inspiring me to try to tackle it in such a short time.
+I must also thank my wife for her enormous forebearance during this project.
 
 ##On Reflection
 
