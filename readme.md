@@ -2,7 +2,11 @@
 # VinSauvage
 This is a submission for the 3rd milestone project of the [codeinstitute](codeinstitute.net) Full Stack Developer bootcamp. The aim of the project is to showcase skills gained from following the Datacentric Development Module as well as the use of other coding skills. The project brief calls for an interactive datacentric recipe website able to demonstrate ability to effect CRUD functionality (CREATE, READ, UPDATE, DELETE) using MongoDB. 
 
+![Landingpage](https://github.com/SingeRoi/vin_sauvage_ms3/blob/master/static/img/Langing%20page.png)
+
+
 ##Design choices
+
 This website has developed following mobile first principles though for speed it began using a preformed bootstrap template. This was then customised to accomodate design for a small device then progressively styled responsively for other device sizes. There are many similar websites to use as models for this principle and many were consulted for inspiration. I sought to use mobile first principles to produce a website balancing natural images with modern looking design in a website that would inspire users to wish to try and share recipes using wild produce available in the beautiful Savoie region. 
 
 ## Database Schema
