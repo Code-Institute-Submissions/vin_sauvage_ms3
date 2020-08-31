@@ -214,7 +214,7 @@ the sites are;
 
     Github repository   https://github.com/SingeRoi/vin_sauvage_ms3
 
-    Heroku              https://git.heroku.com/vinsauvage.git
+    Heroku              https://vinsauvage.herokuapp.com
 
 ###Heroku Deployment 
 
