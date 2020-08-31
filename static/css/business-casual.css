@@ -85,7 +85,6 @@ p {
   /* fixes navbar position to left*/
   position: fixed;
   top: 0;
-  right; unset !important;
   left: 0;
   z-index: 1030;
 }
@@ -150,7 +149,7 @@ p {
 }
 
 .fa, fas {
-    colour:rgba(234, 185, 0, 1);
+    color: rgba(234, 185, 0, 1);
 }
 
 .btn-xl {

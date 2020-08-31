@@ -3,7 +3,7 @@
 This is a submission for the 3rd milestone project of the [codeinstitute](codeinstitute.net) Full Stack Developer bootcamp. The aim of the project is to showcase skills gained from following the Datacentric Development Module as well as the use of other coding skills. The project brief calls for an interactive datacentric recipe website able to demonstrate ability to effect CRUD functionality (CREATE, READ, UPDATE, DELETE) using MongoDB. 
 
 ##Design choices
-This website has developed following mobile first principles though for speed it began using a preformed bootstrap template. This was then customised to accomodate design for a small device then progressively styled responsively for other device sizes. There are many similar websites to use as models for this principle and many were consulted for inspiration. I sought to use mobile first principles to produce a fresh looking website that would inspire users to wish to try and share recipes using wild produce available in the beautiful Savoie region. 
+This website has developed following mobile first principles though for speed it began using a preformed bootstrap template. This was then customised to accomodate design for a small device then progressively styled responsively for other device sizes. There are many similar websites to use as models for this principle and many were consulted for inspiration. I sought to use mobile first principles to produce a website balancing natural images with modern looking design in a website that would inspire users to wish to try and share recipes using wild produce available in the beautiful Savoie region. 
 
 ## Database Schema
 I used the non-relational db engine [MongoDB]() which .... . Database scheme that I used is very simple. It connected users with recipes as one to many relationship. It means that one user could make as many recipes as he can, but one recipe can belong only to one user. 
@@ -19,7 +19,7 @@ The project wireframes were produced using [figma]() and are provided here:
 Considering the natural produce used in the recipes I chose to mirror tones found in Savoie coutryside and the produce used for making VinSauvage. A colour palette was generated using the [coolors](https://coolors.co/) app. 
 ![palette]()
 
-For ease of UI the fonts chosen were ones that are fresh and appealing 'Roboto 'and 'Ubuntu' was chosen for the site.
+For ease of UI the fonts chosen were ones that are stylish and appealing 'Raleway'and 'Lora' were deliberately retained for the site.
 
 ### UX
 ##### User stories
@@ -28,12 +28,9 @@ I use websites of this type to find recipes for foraged produce so I have consid
 -   browse the site without being logged in as a registered user
 -   navigate to recipes 
     - by category
-    - filtering by main ingredient
     - filtering by author 
 -   see the details of recipes
--   create a user profile, and log in and log out
--   via user profile can; add, edit and delete own recipes
--   change profile picture, first name, last name and username, email,
+-   can; add, edit and delete recipes
 -   access the site in a responsive fashion on mobile, tablet or desktop device
 
 
@@ -41,45 +38,52 @@ I use websites of this type to find recipes for foraged produce so I have consid
 
 ##### Existing Features
 
-The site can be used as a guest or as a logged in user, however, some features are only available to logged in users.
+- The site can be used as a guest. 
 
-Any visitor of the site can view three latest recipes in the homepage,  by pressing menu button user can choose BROWSE option and see all recipes that is created on the website. There is also a possibility to filter recipes by author by clicking on author name.
+- Guests can navigate between landing, about, recipe and contact pages, forms open to allow submission and updating of recipes, recipes can be deleted.
 
-Visitors have the option of create an account. Information required to create an account is First name, Last name, Username (which must be unique), password and profile picture(which is set to default), but after registration should be updated in account section . The First name, Last name and Username are stored as plain text but the password is stored in a hashed format using bcrypt. Profile picture can be saved as .svg or .jpg format.
+- Any visitor can view recipes on the recipe page. By pressing the add button they can add their own recipe.
 
-When a visitor has created an account and logged in they are given the option to Add a recipe to the system, Edit their recipes or Delete their recipe from the system. Users can view recipes they have added to the site by filtering recipe by author.
+- Clicking a recipe card opens the recipe for reading and offers options to update/delete.
 
-A user has the option to edit or delete a recipe that they have added to the site only. Editing the recipe allows the user to update/or add to the existing recipe information. Deleting the recipe permanently removes the recipe from the system.
+- By pressing search by buttons user can choose to filter recipes by category and author.
 
-The site features custom error pages for both 403 and 404 errors.
+- Users can edit categories by pressing the edit categories button. 
+
+- By filling in a contact form users can contact the site owner, form requires fields to be completed. 
+
+
 
 ##### Future Features
 
-**Images** - could be improved by letting the user to upload an image from their computer. Also a gallery of images for a smoothie would be a nice feature. Now it is only possible to add URL to youtube.com video with recipe guidlines.
+**Simplify Navigation** - some aspects of navigation are not ideal/intuitive these shuld be addressed by new links and better positioning of buttons.
+
+**Filtering** - add fitlering by recipe name and/or ingredients,
+ 
+**Sign up/Sign in** - implement sign up and sign in pages and functions to register users and limit editing rights to registered users
 
 **Reviews/Comments** - Add the system to allow users to leave a detailed review/comment about a recipe.
 
-**User accounts** - Passwords are currently stored in a hash format but it is an important requirement to make sure that user logins are made more secure. Possibility to remind password.
+**User Dashboard** - A dashboard where the user could update their details including password. Passwords to be encrypted appropriately. 
 
-**User Dashboard** - A dashboard where the user could update their details including password.
-
-
+**Error Pages**  The site should feature custom error pages for 403, 404 and 405 errors.
 ## Technologies Used
 
 The website is designed using following technologies:
 
--   HTML
--   CSS
--   JavaScript
--   [Python](https://www.python.org/)
--   [Flask](http://flask.pocoo.org/)
--   [MongoDB]()
--   [jQuery](https://code.jquery.com/jquery-3.2.1.js)
--   [GitHub]()
--   [Heroku]()
--   [Line Awesome library](https://icons8.com/line-awesome)
--   [Bootstrap](https://getbootstrap.com/)
--   [Google Fonts](https://fonts.google.com/)
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5) is a software solution stack that defines the properties and behaviours of web page content
+-   [CSS3](http://www.css3.info/) Cascading Style Sheets (CSS) is a style sheet language used for describing the look and formatting of a document written in a markup
+-   [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/About_JavaScript) JavaScript is a light-weight, interpreted, object-oriented programming language used primarily for making interactive elements on web pages and applications. It was initially only used for browsers and web pages, but it has spread to many other environments and applications
+-   [Python](https://www.python.org/) a versatile coding language
+-   [Flask](http://flask.pocoo.org/) Flask is a micro web framework written in Python, providing tools to build web-applications
+-   [MongoDB](https://account.mongodb.com/) a non-relational database
+-   [jQuery](https://code.jquery.com/jquery-3.2.1.js) a Javascript library allowing ease of coding and manipulation of the DOM
+-   [GitHub](https://github.com/) for version control during development
+-   [Heroku](https://id.heroku.com/) platform for hosting website
+-   [FontAwesome library](https://fontawesome.com) popular set of icons for use in CSS
+-   [Bootstrap](https://getbootstrap.com/docs/4.3/getting-started/download/) Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development - provides new functions and can be accessed via CDN rather than using a library
+-   [Bootstrap templates](https://getbootstrap.com/) source of web-template ideas
+-   [Google Fonts](https://fonts.google.com/) source of wide range of convenient to use fonts
 
 ## Testing
 
@@ -89,7 +93,7 @@ Tests
 
 **Responsiveness Testing:**
 
-Chrome and Firefox (Mozilla) Developer Tools were used extensively, as well as 
+Chrome and Firefox (Mozilla) Developer Tools were used extensively, as well as testing using 
 
 **User Testing:**
 
@@ -97,15 +101,54 @@ Manual tests were carried out and the testing process was as follows:
 
 **Landing page**
 
--   
+- Check that page opens in common browsers 
+- check that appearance is appropriate;
+    - all content visible or accessible by scrolling
+    - correct postions and sizing of elements for display size
+- check that dropdown navigation responds appropriately to hover, unhover and click  
+- check that other link buttons respond appropriately to hover, unhover and click
+- confirm all links work
 
 **Contact page**
+- Check that page opens in common browsers 
+- check that appearance is appropriate;
+    - all content visible or accessible by scrolling
+    - correct postions and sizing of elements for display size
+- check that dropdown navigation responds appropriately to hover, unhover and click  
+- check that other link buttons respond appropriately to hover, unhover and click
+- confirm all links work
+- confirm that form alerts user if send is pressed without typing information in field
+- confirm that successful send launches messagesent page
 
--  
+**About page**
+- Check that page opens in common browsers 
+- check that appearance is appropriate;
+    - all content visible or accessible by scrolling
+    - correct postions and sizing of elements for display size
+- check that dropdown navigation responds appropriately to hover, unhover and click  
+- check that other link buttons respond appropriately to hover, unhover and click
+- confirm all links work
 
-**User Account**
+**Recipe page**
+- Check that page opens in common browsers 
+- check that appearance is appropriate;
+    - all content visible or accessible by scrolling
+    - correct postions and sizing of elements for display size
+- check that dropdown navigation responds appropriately to hover, unhover and click  
+- check that other link buttons respond appropriately to hover, unhover and click
+- confirm all links to recipes work
 
-###### Register Page
+**Add recipe page**
+- Check that page opens in common browsers 
+- check that appearance is appropriate;
+    - all content visible or accessible by scrolling
+    - correct postions and sizing of elements for display size
+- check that dropdown navigation responds appropriately to hover, unhover and click  
+- check that other link buttons respond appropriately to hover, unhover and click
+- confirm all links work 
+- confirm that on pressin 'add' button the information saves to database.
+- confirm that cancel button does not add info and returns to recipe page
+
 
 
 
@@ -180,21 +223,16 @@ SECRET_KEY 	<your_secret_key>
 
 **Content**
 
-All site images are royalty free from [unsplash](https://unsplash.com/) or [pixabay](https://pixabay.com/) and [unsplash](https://unsplash.com/).
+All site images are royalty free from [unsplash](https://unsplash.com/) or [pixabay](https://pixabay.com/).
 
 **Code References**
-
--
--   [Side navbar](https://bootstrapious.com/p/bootstrap-sidebar)
+This code draws heavily on that in the Code Institute Datacentric development module which has often been followed precisely. Additionally I have used other coding resources for snippets or ideas. 
 -   [Project structure](https://flask.palletsprojects.com/en/1.1.x/tutorial/layout/)
--   [bcrypt](https://flask-bcrypt.readthedocs.io/en/latest/)
--   [pagination](https://www.youtube.com/watch?v=hkL9pgCJPNk)
--   [profile picture](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-vi-profile-page-and-avatars-legacy)
 -   [blueprints](https://realpython.com/flask-blueprint/)
--   [picture handler](https://github.com/jmportilla) - code was taken from his course on [periendata](https://www.pieriandata.com/)
+-   [bootstrap theme](https://startbootstrap.com/themes/clean-blog/)
 -   [Heroku deployment](https://github.com/AJGreaves/familyhub/blob/master/README.md#heroku-deployment)
 
 **Acknowledgements**
- Thanks to my mentor Ignatius Ukwuoma for inspiring me to try to do this project.
+ Thanks to my mentor Ignatius Ukwuoma who thoughtime did not allow him to review this project was greatly responsible for inspiring me to try to tackle it in such a short time.
 
 
