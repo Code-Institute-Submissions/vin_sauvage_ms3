@@ -13,7 +13,7 @@
                     <a class="btn btn-primary btn-xl" href="{{ url_for('manage_category') }}">Manage your categories</a>
                 </div>
                 <!-- this form allows you to edit the recipes -->
-                <form id="contactForm" action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
+                <form id="recipeForm" action="{{ url_for('update_recipe', recipe_id=recipe._id) }}" method="POST" class="col s12">
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls">
                             <label>Recipe Name</label>

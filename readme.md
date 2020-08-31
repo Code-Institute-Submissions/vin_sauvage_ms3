@@ -6,7 +6,7 @@ This is a submission for the 3rd milestone project of the [codeinstitute](codein
 This website has developed following mobile first principles though for speed it began using a preformed bootstrap template. This was then customised to accomodate design for a small device then progressively styled responsively for other device sizes. There are many similar websites to use as models for this principle and many were consulted for inspiration. I sought to use mobile first principles to produce a website balancing natural images with modern looking design in a website that would inspire users to wish to try and share recipes using wild produce available in the beautiful Savoie region. 
 
 ## Database Schema
-I used the non-relational db engine [MongoDB]() which .... . Database scheme that I used is very simple. It connected users with recipes as one to many relationship. It means that one user could make as many recipes as he can, but one recipe can belong only to one user. 
+I used the database engine [MongoDB](https://www.quackit.com/mongodb/tutorial/about_mongodb.cfm) MongoDB is a document-oriented NoSQL database used for high volume data storage. Instead of using tables and rows as in the traditional relational databases, MongoDB makes use of collections and documents. Documents consist of key-value pairs which are the basic unit of data in MongoDB. Database scheme that I used is very simple. It connected users with recipes as one to many relationship. It means that one user could make as many recipes as he can, but one recipe can belong only to one user. 
 
 USER ===> [recipe1, recipe2,recipe3] 
 recipe1 ===> USER
@@ -89,11 +89,12 @@ The website is designed using following technologies:
 
 Automated testing
 
+Did not allow automated testing other than routine validation of cose at WS3, minor issues raised by this were corrected. 
 Tests 
 
 **Responsiveness Testing:**
 
-Chrome and Firefox (Mozilla) Developer Tools were used extensively, as well as testing using 
+Chrome and Firefox (Mozilla) Developer Tools were used extensively, as well as confriming the result of this testing using real devices of various display sizes and using different browsers. 
 
 **User Testing:**
 
@@ -117,8 +118,8 @@ Manual tests were carried out and the testing process was as follows:
 - check that dropdown navigation responds appropriately to hover, unhover and click  
 - check that other link buttons respond appropriately to hover, unhover and click
 - confirm all links work
-- confirm that form alerts user if send is pressed without typing information in field
-- confirm that successful send launches messagesent page
+- confirm that form alerts user if send button is pressed without typing information in field
+- confirm that successful send launches message sent page
 
 **About page**
 - Check that page opens in common browsers 
@@ -146,40 +147,49 @@ Manual tests were carried out and the testing process was as follows:
 - check that dropdown navigation responds appropriately to hover, unhover and click  
 - check that other link buttons respond appropriately to hover, unhover and click
 - confirm all links work 
-- confirm that on pressin 'add' button the information saves to database.
+- confrim that category drop down responds correctly
+- confirm that on pressing 'add' button the information saves to database.
 - confirm that cancel button does not add info and returns to recipe page
 
+**Show recipe page**
+- Check that page opens in common browsers 
+- check that appearance is appropriate;
+    - all content visible or accessible by scrolling
+    - correct postions and sizing of elements for display size
+- check that dropdown navigation responds appropriately to hover, unhover and click  
+- check that other link buttons respond appropriately to hover, unhover and click
+- confirm all links work 
+- confirm that search dropdowns respond appropriately to hover, unhover and click and that each selection delivers appropriate content
+- check that delete button leads to deletion of entry from MongoDB 
 
-
-
-###### Login Page
+**Message sent page**
+- Check that page opens in common browsers - only after successful messgae form submission (otherwise see ) 
+- check that appearance is appropriate;
+    - all content visible or accessible by scrolling
+    - correct postions and sizing of elements for display size
+- check that dropdown navigation responds appropriately to hover, unhover and click  
+- check that other link buttons respond appropriately to hover, unhover and click
+- confirm all links work
  -
  
-###### Add Recipe
+###### Results of testing
 
-- 
-###### Edit Recipe
+This site was tested across multiple browsers (Chrome, Safari, Microsoft Edge, FireFox, Ecosia) and on multiple mobile devices (iPhone 5, OnePlus5 and OnePlus7 iPadMini and iPad-pro, Chrome/Firefox/Safari; MacBook Air, Asus and Jumper laptops; Chrome/Safari/Firefox) to ensure compatibility and responsiveness. A range of other devices including pixel2+pixel2XL, Galaxy S9, Nexus 4, iPhoneX and various desktop display sizes were simulated using [Responsive Design Checker](https://responsivedesignchecker.com/) and [The Responsinator](https://www.responsinator.com/). As a result of these tests:
 
--   
-###### Delete Recipe
+- adjustments were made to the positions of page headings to ensure correct positioning below header bar on small devices.
+- adjustments were also made to adjust the postion of recipe images and text on small and large devices
 
--   
-###### My Recipes
+###### Outstanding issues
 
--   
-###### Logout
+The navigation of the site is not as intuitive as I would like notably the use of two distinct recipe pages I would like to combine these in future to give a single consistent page whatever route of navigation is used.
+I would have liked to add further search capabilities to the database.  
 
--  
-**Recipe Page**
-
-**Error Pages**
-
--  
-## Test Findings
 
 ## Deployment
 
 Deployment and version control was carried out using GitHub and Heroku. The repository location is as follows:
+
+the sites are;
 
 
 ###Heroku Deployment 
@@ -236,3 +246,10 @@ This code draws heavily on that in the Code Institute Datacentric development mo
  Thanks to my mentor Ignatius Ukwuoma who thoughtime did not allow him to review this project was greatly responsible for inspiring me to try to tackle it in such a short time.
 
 
+##On Reflection
+
+This project was achived in a very short time (approx. 1 week) against the deadline of the expiry of my Code Institute studentship, it is therefore rough around the edges but has served as a satisfying demonstration that I can achieve a working CRUD implementation with MongoDB under pressure. 
+
+##Disclaimer
+
+This is for educational use.

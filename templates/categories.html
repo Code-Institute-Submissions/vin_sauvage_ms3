@@ -3,7 +3,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12 center-align">
-            <form id="contactForm" action="{{ url_for('insert_category') }}" method="POST" class="col s12">
+            <form id="recipetForm" action="{{ url_for('insert_category') }}" method="POST" class="col s12">
                 <div class="input-group mb-3">
                     <input type="text" class="form-control" placeholder="Add a new category" name="category_name" aria-describedby="basic-addon2">
                     <div class="input-group-append">
@@ -24,8 +24,8 @@
                 </div>
                 <!-- buttons -->
                 <div class="card-action">
-                    <a href="{{ url_for('edit_category', category_id=category._id) }}" class="waves-effect waves-light btn btn_small light-green">Edit</a>
-                    <a href="{{ url_for('delete_category', category_id=category._id) }}" class="waves-effect waves-light btn btn_small red accent-4">Delete</a>
+                    <a href="{{ url_for('edit_category', category_id=category._id) }}" class=" btn btn_small ">Edit</a>
+                    <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn btn_small accent-4">Delete</a>
                 </div>
             </div>
         </div>
