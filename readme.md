@@ -6,18 +6,20 @@ This is a submission for the 3rd milestone project of the [codeinstitute](codein
 This website has developed following mobile first principles though for speed it began using a preformed bootstrap template. This was then customised to accomodate design for a small device then progressively styled responsively for other device sizes. There are many similar websites to use as models for this principle and many were consulted for inspiration. I sought to use mobile first principles to produce a website balancing natural images with modern looking design in a website that would inspire users to wish to try and share recipes using wild produce available in the beautiful Savoie region. 
 
 ## Database Schema
-I used the database engine [MongoDB](https://www.quackit.com/mongodb/tutorial/about_mongodb.cfm) MongoDB is a document-oriented NoSQL database used for high volume data storage. Instead of using tables and rows as in the traditional relational databases, MongoDB makes use of collections and documents. Documents consist of key-value pairs which are the basic unit of data in MongoDB. Database scheme that I used is very simple. It connected users with recipes as one to many relationship. It means that one user could make as many recipes as he can, but one recipe can belong only to one user. 
+I used the database engine [MongoDB].MongoDB is a document-oriented NoSQL database used for high volume data storage. Instead of using tables and rows as in the traditional relational databases, MongoDB makes use of collections and documents. Documents consist of key-value pairs which are the basic unit of data in [MongoDB](https://www.guru99.com/what-is-mongodb.html). I use a simple Database scheme. There are 4 collections in my database:recipes, categories, authors and messages.
 
-USER ===> [recipe1, recipe2,recipe3] 
-recipe1 ===> USER
-recipe2 ===> USER
+recipeDB:
+    1. recipes 2. categories 3. authors 4. messages
+    
+I can use items in the categories to seach for corresponding recipes. I also can use items in authors to search for recipes. Items in the recipes and the categories can be added, updated,read and deleted. When a message is sent using the contact form, messages will gain a new entry.
+
 
 ## UX/UI
 ### UI
-The project wireframes were produced using [figma]() and are provided here:
+The project wireframes were produced using [figma](https://www.figma.com/) and are provided here:
 
 Considering the natural produce used in the recipes I chose to mirror tones found in Savoie coutryside and the produce used for making VinSauvage. A colour palette was generated using the [coolors](https://coolors.co/) app. 
-![palette]()
+![palette](https://github.com/SingeRoi/vin_sauvage_ms3/blob/master/static/img/vinsauvage%20palette.png)
 
 For ease of UI the fonts chosen were ones that are stylish and appealing 'Raleway'and 'Lora' were deliberately retained for the site.
 
@@ -50,13 +52,12 @@ I use websites of this type to find recipes for foraged produce so I have consid
 
 - Users can edit categories by pressing the edit categories button. 
 
-- By filling in a contact form users can contact the site owner, form requires fields to be completed. 
-
+- By filling in a contact form users can contact the site owner.
 
 
 ##### Future Features
 
-**Simplify Navigation** - some aspects of navigation are not ideal/intuitive these shuld be addressed by new links and better positioning of buttons.
+**Simplified Navigation** - some aspects of navigation are not ideal/intuitive these shuld be addressed by new links and better positioning of buttons.
 
 **Filtering** - add fitlering by recipe name and/or ingredients,
  
@@ -67,6 +68,7 @@ I use websites of this type to find recipes for foraged produce so I have consid
 **User Dashboard** - A dashboard where the user could update their details including password. Passwords to be encrypted appropriately. 
 
 **Error Pages**  The site should feature custom error pages for 403, 404 and 405 errors.
+
 ## Technologies Used
 
 The website is designed using following technologies:
@@ -160,7 +162,18 @@ Manual tests were carried out and the testing process was as follows:
 - check that other link buttons respond appropriately to hover, unhover and click
 - confirm all links work 
 - confirm that search dropdowns respond appropriately to hover, unhover and click and that each selection delivers appropriate content
-- check that delete button leads to deletion of entry from MongoDB 
+- confirm that the add recipe and manage your categories buttons respond correctly 
+
+**Display one recipe page**
+- Check that page opens in common browsers 
+- check that appearance is appropriate;
+    - all content visible or accessible by scrolling
+    - correct postions and sizing of elements for display size
+- check that dropdown navigation responds appropriately to hover, unhover and click  
+- check that other link buttons respond appropriately to hover, unhover and click
+- confirm all links work 
+- check that edit button leads to update of entry in MongoDB
+- check that delete button leads to deletion of entry from MongoDB
 
 **Message sent page**
 - Check that page opens in common browsers - only after successful messgae form submission (otherwise see ) 
@@ -170,7 +183,8 @@ Manual tests were carried out and the testing process was as follows:
 - check that dropdown navigation responds appropriately to hover, unhover and click  
 - check that other link buttons respond appropriately to hover, unhover and click
 - confirm all links work
- -
+
+
  
 ###### Results of testing
 
@@ -191,20 +205,45 @@ Deployment and version control was carried out using GitHub and Heroku. The repo
 
 the sites are;
 
+    Github repository   https://github.com/SingeRoi/vin_sauvage_ms3
+
+    Heroku              https://git.heroku.com/vinsauvage.git
 
 ###Heroku Deployment 
 
-To deploy Family Hub to heroku, take the following steps:
+To deploy VinSauvage to heroku, use the following steps:
 
-    Create a requirements.txt file using the terminal command pip freeze > requirements.txt.
+    Create a requirements.txt file using the terminal command 
+    
+            $ pip3 freeze > requirements.txt.
 
-    Create a Procfile with the terminal command echo web: python app.py > Procfile.
+    Create a Procfile with the terminal command 
+    
+            $ echo web: python3 app.py > Procfile.
 
-    git add and git commit the new requirements and Procfile and then git push the project to GitHub.
+    git add and git commit the new requirements and Procfile and then git push the project to GitHub for control.
 
     Create a new app on the Heroku website by clicking the "New" button in your dashboard. Give it a name and set the region to Europe.
-
-    From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+    
+    On your terminal type 
+    
+        $ heroku login
+    
+        $ mkdir vindeployment
+        
+        $ cd vindeployment
+        
+        $ heroku git:remote -a .vinsauvage
+        
+    proceed as usual with 
+        
+        $ git add .
+        
+        $ git commit -m "message"
+        
+        $ git push heroku master
+    
+    
 
     Confirm the linking of the heroku app to the correct GitHub repository.
 
@@ -215,7 +254,7 @@ To deploy Family Hub to heroku, take the following steps:
 Key 	Value
 DEBUG 	FALSE
 IP 	0.0.0.0
-MONGO_URI 	mongodb+srv://<username>:<password>@<cluster_name>-qtxun.mongodb.net/<database_name>?retryWrites=true&w=majority
+MONGO_URI 	mongodb+srv://<username>:<password>@<cluster_name>-qghgc.mongodb.net/<database_name>?retryWrites=true&w=majority
 PORT 	5000
 SECRET_KEY 	<your_secret_key>
 
@@ -238,9 +277,8 @@ All site images are royalty free from [unsplash](https://unsplash.com/) or [pixa
 **Code References**
 This code draws heavily on that in the Code Institute Datacentric development module which has often been followed precisely. Additionally I have used other coding resources for snippets or ideas. 
 -   [Project structure](https://flask.palletsprojects.com/en/1.1.x/tutorial/layout/)
--   [blueprints](https://realpython.com/flask-blueprint/)
 -   [bootstrap theme](https://startbootstrap.com/themes/clean-blog/)
--   [Heroku deployment](https://github.com/AJGreaves/familyhub/blob/master/README.md#heroku-deployment)
+-   [Heroku deployment was modified from that of AJGreaves](https://github.com/AJGreaves/familyhub/blob/master/README.md#heroku-deployment)
 
 **Acknowledgements**
  Thanks to my mentor Ignatius Ukwuoma who thoughtime did not allow him to review this project was greatly responsible for inspiring me to try to tackle it in such a short time.
