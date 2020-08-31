@@ -16,9 +16,12 @@ I can use items in the categories to seach for corresponding recipes. I also can
 
 ## UX/UI
 ### UI
-The project wireframes were produced using [figma](https://www.figma.com/) and are provided here:
+The project wireframes were produced using [figma](https://www.figma.com/) and are provided here
+
+![iPhone wireframe](https://github.com/SingeRoi/vin_sauvage_ms3/blob/master/static/img/iphone%20wireframe%20(2).png)
 
 Considering the natural produce used in the recipes I chose to mirror tones found in Savoie coutryside and the produce used for making VinSauvage. A colour palette was generated using the [coolors](https://coolors.co/) app. 
+
 ![palette](https://github.com/SingeRoi/vin_sauvage_ms3/blob/master/static/img/vinsauvage%20palette.png)
 
 For ease of UI the fonts chosen were ones that are stylish and appealing 'Raleway'and 'Lora' were deliberately retained for the site.
